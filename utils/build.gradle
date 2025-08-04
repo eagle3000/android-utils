@@ -15,20 +15,10 @@
  */
 
 plugins {
-    id 'com.jfrog.bintray' version '1.8.5'
+    id 'com.jfrog.bintray' version '1.8.5' {
+        exclude group: 'org.codehaus.groovy.modules.http-builder', module: 'http-builder'
+    }
     id 'maven-publish'
-}
-
-buildscript {
-    repositories {
-      maven { url 'https://nexus.web.cern.ch/nexus/content/repositories/public/' }
-    }
-}
-allprojects {
-    repositories {
-      maven { url 'https://nexus.web.cern.ch/nexus/content/repositories/public/' }
-
-    }
 }
 
 def localPropertiesFile = rootProject.file('local.properties')
