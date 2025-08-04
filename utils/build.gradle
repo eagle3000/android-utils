@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id ('com.jfrog.bintray' version '1.8.4') {
+    id ('com.jfrog.bintray') version '1.8.4' {
         exclude group: 'org.codehaus.groovy.modules.http-builder', module: 'http-builder'
     }
     id 'maven-publish'
