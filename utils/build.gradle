@@ -19,6 +19,18 @@ plugins {
     id 'maven-publish'
 }
 
+buildscript {
+    repositories {
+      maven { url 'https://nexus.web.cern.ch/nexus/content/repositories/public/' }
+    }
+}
+allprojects {
+    repositories {
+      maven { url 'https://nexus.web.cern.ch/nexus/content/repositories/public/' }
+
+    }
+}
+
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.file) {
     Properties localProperties = new Properties()
